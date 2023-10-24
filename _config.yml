@@ -1,0 +1,30 @@
+lsi: false
+safe: true
+source: .
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+  kramdown:
+    math_engine: mathjax
+    syntax_highlighter: rouge
+
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
+
+title: Parcel B Ventures
+description: Investing in Olin College Startups
+
+github:
+  is_project_page: false
+  is_user_page: false
+  repository: parcelbvc/parcelbvc.github.io
+  baseurl: "parcelb.vc"
+  url: https://parcelbvc.github.io
+  organization: parcelbvc
+  name: Parcel B Ventures
+  description: Investing in Olin College Startups
+  email: admins@parcelb.vc
+
+logo: /assets/images/logo.png
