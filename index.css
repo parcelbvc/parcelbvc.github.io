@@ -1,0 +1,139 @@
+/* index.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap');
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+    background: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: -0.02em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    max-width: 100%;
+    letter-spacing: 0;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.image-wrapper {
+    aspect-ratio: 1;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.3); /* Subtle background if image fails to load */
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    letter-spacing: 0;
+}
+
+.portfolio-item, .contact-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #333333;
+    font-style: italic;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.portfolio-item:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.portfolio-item svg,
+.portfolio-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+
+.portfolio-item:hover svg,
+.portfolio-item:hover img {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+/* Override SVG colors for Lever logo */
+.portfolio-item svg .st1,
+.portfolio-item svg path[fill="#d9d9d9"],
+.portfolio-item:hover svg .st1,
+.portfolio-item:hover svg path[fill="#d9d9d9"] {
+    fill: #ffffff;
+}
+
+.contact-item a {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.contact-item a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.current-fund, .previous-highlights {
+    margin-top: 1rem;
+}
+
+.history, .contact {
+    margin-top: 2rem;
+}
+
+footer {
+    margin-top: 4rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    letter-spacing: 0;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .image-grid {
+        gap: 0.5rem;
+    }
+}
